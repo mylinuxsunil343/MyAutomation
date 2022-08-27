@@ -1,8 +1,12 @@
 -
-  name: HelloWorld
-  hosts: localhost
+  name: Copy file
+  hosts: all
   tasks:
+<<<<<<< HEAD
     - name: copy command `date`
+=======
+    - name: Copy file
+>>>>>>> 7b2040c766a7e1e390d5dfecc39bd1c6617e2990
       copy:
         src: /home/sunil/Desktop/Sunil/test.txt
         dest: /home/sunil/Desktop/test.txt
