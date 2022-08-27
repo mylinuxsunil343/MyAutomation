@@ -2,5 +2,7 @@
   name: HelloWorld
   hosts: localhost
   tasks:
-    - name: Execute command `date`
-    - command: date
+    - name: copy command `date`
+      copy:
+        src: /home/sunil/Desktop/Sunil/test.txt
+        dest: /home/sunil/Desktop/test.txt

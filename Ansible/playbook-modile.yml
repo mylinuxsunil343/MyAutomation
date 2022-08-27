@@ -1,0 +1,14 @@
+-
+  name: Test
+  hosts: all
+  tasks:
+    - name: ping
+      ping:
+
+# modules
+# system
+# commands
+# files
+# databases
+# cloud
+# windows & more
