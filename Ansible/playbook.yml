@@ -1,6 +1,14 @@
+#-
+#  name: HelloWorld
+#  hosts: localhost
+#  tasks:
+#    - name: Execute command `date`
+#    - command: date
 -
-  name: HelloWorld
-  hosts: localhost
+  name: Copy file
+  hosts: all
   tasks:
-    - name: Execute command `date`
-    - command: date
+    - name: Copy file
+      copy:
+        src: /home/sunil/Desktop/Sunil/test.txt
+        dest: /home/sunil/Desktop/test.txt
