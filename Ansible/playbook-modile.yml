@@ -2,10 +2,30 @@
   name: Test
   hosts: all
   tasks:
-    - name: ping
+    - 
+      name: ping
       ping:
-    - name: Hello world
+    - 
+      name: Hello world
       command: echo "Hi"
+    - 
+      name: Exec script
+      script: /home/sunil/Desktop/Sunil/test.sh
+#    -
+#      name: checking the servoce
+#      service: 'name=httpd state=started'
+#     -
+#      name: update entry to a file
+#      lineinfile:
+#         path: /etc/resolv.conf
+#         line: 'nameserver 10.1.2.1'
+#     -
+#       name: 'create user'
+#       user:
+#         name: web_user  
+#         uid: 1040
+#         group: developer
+
 # modules
 # system
 # commands
