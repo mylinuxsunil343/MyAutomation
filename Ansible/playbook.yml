@@ -1,0 +1,6 @@
+-
+  name: HelloWorld
+  hosts: localhost
+  tasks:
+    - name: Execute command `date`
+    - command: date
