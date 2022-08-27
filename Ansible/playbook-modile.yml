@@ -4,11 +4,12 @@
   tasks:
     - name: ping
       ping:
-
+    - name: Hello world
+      command: echo "Hi"
 # modules
 # system
 # commands
 # files
 # databases
 # cloud
-# windows & more
+# windows & more - script, service
