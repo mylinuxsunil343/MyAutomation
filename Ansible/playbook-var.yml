@@ -1,0 +1,8 @@
+-
+  name: variables test
+  hosts: all
+  vars:
+    myname: 'Sunil Marella'
+  tasks:
+    - name: callings variables
+      command: echo "Hello {{ myname }}"
