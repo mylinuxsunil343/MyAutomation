@@ -1,5 +1,41 @@
 - name: Deploy web application
   hosts: db_and_web_server
   tasks:
-    - name: pingserver
-      ping:
+    - name: Install all required dependncies
+      apt: 
+        name:
+        - python
+        - python-setuptools
+        - python-dev
+        - build-essential
+        - python-pip
+        - mysql-server
+        - mysql-client
+        state: present
+        autoclean: yes
+    - name: Starting MySQL
+      service:
+        name: mysql
+        state: started
+        enabled: yes
+
+    - name: Create application database
+      mysql_db: name=employee_db state=present
+    - name: create database user
+      mysql_user:
+        name: db_user
+        password: passw0rd
+        priv: '*.*:ALL'
+        state: present
+        host: '%'
+    - name: Install flask dependencies
+      pip:
+        name: "{{ item }}"
+        state: present
+        with_items:
+          - flask
+          - flask-mysql
+    - name: copy source code
+      copy: src=app.py dest=/opt/app.py
+    - name: Start the web server
+      shell: FLASK_APP=/opt/app.py nohup flask run --host=0.0.0.0 &
