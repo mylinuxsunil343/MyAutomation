@@ -1,0 +1,19 @@
+#create docker container for ubuntu with ssh from docker file
+
+#docker build -t ubuntu-ssh .
+#docker run ubuntu-ssh -p 22:22
+#ssh test@dockerip
+
+#docker.socket issue
+#sudo chown sunil:docker /var/run/docker.sock
+#docker context use default
+
+# Building the image
+#To build the image run docker build -t IMAGE_NAME . , once that's done you can run the image using docker run IMAGE_NAME -p 22:22. finally you can connect to the container using the user you created , in this case it will be test so ssh test@ip_address enter your password in the prompt and your all setup
+#Ref: https://dev.to/s1ntaxe770r/how-to-setup-ssh-within-a-docker-container-i5i
+
+# edit /etc/ansible/ansible.cfg add below 
+[defaults]
+inventory = /home/sunil/Desktop/Sunil/Automation/MyAutomation/Ansible/Web/Demo/Inventory/inventory
+host_key_checking = False
+# SSH will not prompt yes or no
