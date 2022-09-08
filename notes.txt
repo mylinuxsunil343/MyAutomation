@@ -1,5 +1,9 @@
 #create docker container for ubuntu with ssh from docker file
 
+# set git user and email in vscode terminal
+# git config --global user.name "Sunil Marella"
+# git config --global user.email "myemail@gmail.com"
+
 #docker build -t ubuntu-ssh .
 #docker run ubuntu-ssh -p 22:22
 #ssh test@dockerip
