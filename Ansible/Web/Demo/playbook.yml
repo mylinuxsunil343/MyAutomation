@@ -12,6 +12,7 @@
         - python3-pip
         - mysql-server
         - mysql-client
+        - python3-mysqldb
         state: present
         autoclean: yes
     - name: Starting MySQL
