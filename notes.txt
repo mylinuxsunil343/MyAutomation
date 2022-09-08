@@ -21,3 +21,6 @@
 inventory = /home/sunil/Desktop/Sunil/Automation/MyAutomation/Ansible/Web/Demo/Inventory/inventory
 host_key_checking = False
 # SSH will not prompt yes or no
+
+
+# ansible-playbook --become --ask-become-pass playbook.yml -i inventory.txt
