@@ -15,12 +15,16 @@
         - python3-mysqldb
         state: present
         autoclean: yes
+    - name: without password sudoers
+      copy:
+        content: '%wheel ALL=(ALL:ALL) NOPASSWD:ALL'
+        dest: /etc/sudoers.d/wheel_nopasswd
+        mode: 0440
     - name: Starting MySQL
       service:
         name: mysql
         state: started
-        enabled: yes
-
+        enabled: yes       
     - name: Create application database
       mysql_db: name=employee_db state=present
     - name: create database user
@@ -30,6 +34,7 @@
         priv: '*.*:ALL'
         state: present
         host: '%'
+        login_unix_socket: /var/run/mysqld/mysqld.sock
     - name: Install flask dependencies
       pip:
         name: "{{ item }}"
