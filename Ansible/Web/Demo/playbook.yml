@@ -37,9 +37,7 @@
         login_unix_socket: /var/run/mysqld/mysqld.sock
     - name: Install flask dependencies
       pip:
-        name: "{{ item }}"
-        state: present
-        with_items:
+        name:
           - flask
           - flask-mysql
     - name: copy source code
