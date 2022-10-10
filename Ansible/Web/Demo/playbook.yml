@@ -38,8 +38,8 @@
     - name: Install flask dependencies
       pip:
         name:
-          - flask
-          - flask-mysql
+         - flask
+         - flask-mysql
     - name: copy source code
       copy: src=app.py dest=/opt/app.py
     - name: Start the web server
