@@ -5,3 +5,5 @@ Terraform
 Docker
 AWS
 Linux
+Git
+Code
