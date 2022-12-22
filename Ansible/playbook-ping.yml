@@ -1,0 +1,7 @@
+---
+- name: "My first playbook, press ctrl+shift+p"
+  hosts: localhost
+
+  tasks:
+    - name: "test connectivity"
+      ping:
