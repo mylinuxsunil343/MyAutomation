@@ -24,7 +24,7 @@ ex: ansible -i /home/sunil/ansible/hosts playbooks.yml
 alias:  
 
 server1 ansible_alias_host=1.2.3.4  
-
+<hr>
 <h3>use become=yes to run as root</h3>
 
 ansible-playbook playbooks.yml -K
