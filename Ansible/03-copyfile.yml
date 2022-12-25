@@ -1,8 +1,9 @@
--
-  name: Copy file
-  hosts: all
-  tasks:
-    - name: copy module test
-      copy:
-        src: /home/sunil/Desktop/Sunil/test.txt
-        dest: /home/sunil/Desktop/
+---
+  - name: Copy file
+    hosts: all
+    tasks:
+      - name: copy module test
+        copy:
+          src: /home/sunil/Desktop/Sunil/test.txt
+          dest: /home/sunil/Desktop/
+          mode: 0644
