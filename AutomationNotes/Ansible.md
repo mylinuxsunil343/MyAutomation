@@ -6,7 +6,7 @@
 <li>alias</li>
 </ol>
 
-<u>default</u>: /etc/ansible/hosts 
+<p style="text decoration:underline;">default</p>: /etc/ansible/hosts 
 
 ex: 
 Local host settings 
@@ -16,12 +16,12 @@ Local host settings
 localhost ansible_connection=local  
 
 
-<u>custom location:</u> use -i with playbook commands  
+<p style="text decoration:underline;">custom location:</p> use -i with playbook commands  
 
 ex: ansible -i /home/sunil/ansible/hosts playbooks.yml  
 
 
-<u>alias:</u>  
+<p style="text decoration:underline;">alias:</p>  
 
 server1 ansible_alias_host=1.2.3.4  
 <hr>
