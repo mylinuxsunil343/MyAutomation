@@ -22,9 +22,22 @@ ex: ansible -i /home/sunil/ansible/hosts playbooks.yml
 <u>alias:</u>  
 
 server1 ansible_alias_host=1.2.3.4  
+
+list inventory: ansible-inventory --list
 <hr>
 <h3>use become=yes to run as root</h3>
 
 ansible-playbook playbooks.yml -K
 
 use -K or --ask-become-pass
+<hr>
+<h3>Connection to remote clients</h3>
+Generate SSH Keys on the control node and copy over to clients for password less SSH Connection
+<ol>
+<li>ssh-keygen</li>
+<li>Leave everything default and enter</li>
+<li>ssh-copy-id server1</li>
+<li>ssh-copy-id server2</li>
+</ol>
+<hr>
+<u>General</u>
