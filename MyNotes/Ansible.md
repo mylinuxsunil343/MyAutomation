@@ -23,7 +23,8 @@ ex: ansible -i /home/sunil/ansible/hosts playbooks.yml
 
 server1 ansible_alias_host=1.2.3.4  
 
-list inventory: ansible-inventory --list
+list inventory: ansible-inventory --list    
+Ping all hosts: ansible all -m ping / ansible -a "uptime" all
 <hr>
 <h3>use become=yes to run as root</h3>
 
