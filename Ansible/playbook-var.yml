@@ -1,8 +1,8 @@
 -
   name: variables test
-  hosts: all
+  hosts: localhost
   vars:
     myname: 'Sunil Marella'
   tasks:
     - name: callings variables
-      command: echo "Hello {{ myname }}"
+      msg: "Hello {{ myname }}"

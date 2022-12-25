@@ -1,0 +1,11 @@
+---
+- name: "Uninstalling httpd"
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: "Unistalling apache"
+      yum:
+        name: httpd
+        state: absent
+# ansible-playbook playbook-package.yml -K
+# use -K or --ask-become-pass
