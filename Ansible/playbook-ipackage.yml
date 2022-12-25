@@ -1,0 +1,14 @@
+---
+- name: Installing apache centos9-stream
+  hosts: local
+  become: yes
+  tasks:
+    - name: Installing HTTPD apache
+      yum:
+        name: httpd
+        state: present
+
+    - name: Starting apache service
+      service:
+        name: httpd
+        state: started

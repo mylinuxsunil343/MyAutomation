@@ -1,6 +1,6 @@
 ---
 - name: "Uninstalling httpd"
-  hosts: localhost
+  hosts: local
   become: yes
   tasks:
     - name: "Unistalling apache"

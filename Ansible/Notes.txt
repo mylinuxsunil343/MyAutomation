@@ -1,2 +1,9 @@
 Ansible inventory /etc/ansible/hosts
 
+Local host settings
+[local]
+localhost ansible_connection=local
+
+use become=yes to run as root
+ansible-playbook playbook-package.yml -K
+use -K or --ask-become-pass
