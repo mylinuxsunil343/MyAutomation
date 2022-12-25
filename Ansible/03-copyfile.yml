@@ -6,4 +6,10 @@
         copy:
           src: /home/sunil/Desktop/Sunil/test.txt
           dest: /home/sunil/Desktop/
+#          owner: jenkins
+#          group: jenkins
           mode: 0644
+      - name: changing permissions
+        file:
+          path: /home/sunil/Desktop/test.txt
+          mode: a+w
