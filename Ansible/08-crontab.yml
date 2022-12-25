@@ -1,0 +1,14 @@
+---
+- name: scheduling a cron search
+  hosts: local
+  tasks:
+    - name: scheduling a cron
+      cron:
+        name: everyday at 6PM
+        minute: "0"
+        hour: "6"
+        day: "*"
+        month: "*"
+        weekday: "*"
+        user: root
+        job: "/home/sunil/Desktop/Sunil/Automation/MyAutomation/Ansible/myscript.sh"
