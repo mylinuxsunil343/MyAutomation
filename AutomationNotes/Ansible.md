@@ -11,12 +11,15 @@ default: /etc/ansible/hosts
 ex: 
 Local host settings 
 
-[local] 
+[local]
+
 localhost ansible_connection=local  
+
 
 custom location: use -i with playbook commands  
 
 ex: ansible -i /home/sunil/ansible/hosts playbooks.yml  
+
 
 alias:  
 
