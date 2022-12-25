@@ -1,4 +1,4 @@
-Ansible inventory : 3 methods
+<b>Ansible inventory</b> : 3 methods
 
 default, custom location, alias
 
@@ -24,7 +24,7 @@ alias:
 server1 ansible_alias_host=1.2.3.4
 
 
-use become=yes to run as root
+<b>use become=yes to run as root</b>
 
 ansible-playbook playbooks.yml -K
 
