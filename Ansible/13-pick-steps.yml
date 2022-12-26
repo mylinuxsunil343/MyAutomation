@@ -1,0 +1,19 @@
+---
+- name: pick and choose steps from where ansible runs
+  hosts: local
+
+  tasks:
+    - name: Install apache
+      yum:
+        name: httpd
+        state: present
+    - name: Start Service
+      services:
+        name: httpd
+        state: started
+    - name: Install telnet
+      yum:
+        name: telnet
+        state: present
+# ansible=playbook 13-pick-steps.yml --start-at-step 'Start Service'
+# This will ignore install apache step and start from running service
