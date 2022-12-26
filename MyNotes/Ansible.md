@@ -39,5 +39,15 @@ Syntax check: ansible-playbook playbook.yml --syntax-check
 <h3>Ansible Ad-hoc commands</h3>
 Adhoc commands you can use without need of playbooks <br> 
 syntax: ansible [target] -m [module] -a "[module options]" <br>  
+
+Pinging servers<br>
 ex: ansible webservers -m ping <br>
-ex: ansible webserrvers file -a "path=/home/sunil/sunil.txt state=touch mode=0755"
+
+Creating file: <br>
+ex: ansible webservers file -a "path=/home/sunil/sunil.txt state=touch mode=0755"<br>
+
+Deleting file: <br>
+ex: ansible webservers file -a "path=/home/sunil/sunil.txt state=absent"<br>
+
+Copying file <br>
+ex: ansible webservers copy -a "src=source dest=destination"<br>
