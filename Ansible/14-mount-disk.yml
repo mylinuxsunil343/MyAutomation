@@ -1,0 +1,32 @@
+---
+- name: Craete and mount New Storage
+# some Ansible distribution does not come with parted or mount module, if so install those modules
+# ansible-galaxy collection install community.general
+# ansible-gelaxy collection install ansible.posix
+  hosts: local
+  tasks:
+    - name: create new partition
+      parted:
+        name: files
+        label: gpt
+        device: /dev/sdf1
+        state: present
+        part_start: 1MiB
+        part_end: 100GiB
+
+    - name: Create XFS File system
+      filesystem:
+        dev: /dev/sdf1
+        fstype: xfs
+    
+    - name: create mount directory
+      file:
+        path: /splunk
+        state: directory
+    
+    - name: Mount file system
+      mount:
+        src: /dev/sdf1
+        fstype: xfs
+        state: mounted
+        path: /splunk
