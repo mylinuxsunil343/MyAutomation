@@ -8,4 +8,4 @@
       name: splunk
       update_password: always
       password: "{{ newpassword|password_hash('sha512') }}"
-# ansible-playbook 10-user-pw.yml --extra-vars newpassword=xxxxxx
+      # ansible-playbook 10-user-pw.yml --extra-vars newpassword=xxxxxx
