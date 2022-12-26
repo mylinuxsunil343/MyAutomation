@@ -6,31 +6,23 @@
 <li>alias</li>
 </ol>
 
-<u>default</u>: /etc/ansible/hosts 
+<u>default</u>: /etc/ansible/hosts <br> 
+ex: <br> 
+Local host settings <br> 
 
-ex: 
-Local host settings 
-
-[local]
-<br>localhost ansible_connection=local  
-
-<u>custom location:</u> use -i with playbook commands  
-
-ex: ansible -i /home/sunil/ansible/hosts playbooks.yml  
-
-
+[local] <br> 
+localhost ansible_connection=local <br>  
+<u>custom location:</u> use -i with playbook commands   <br> 
+ex: ansible -i /home/sunil/ansible/hosts playbooks.yml  <br> 
 <u>alias:</u>  
+server1 ansible_alias_host=1.2.3.4  <br> 
 
-server1 ansible_alias_host=1.2.3.4  
-
-list inventory: ansible-inventory --list    
-Ping all hosts: ansible all -m ping / ansible -a "uptime" all
+list inventory: ansible-inventory --list <br>    
+Ping all hosts: ansible all -m ping / ansible -a "uptime" all<br> 
 <hr>
 <h3>use become=yes to run as root</h3>
-
-ansible-playbook playbooks.yml -K
-
-use -K or --ask-become-pass
+ansible-playbook playbooks.yml -K <br> 
+use -K or --ask-become-pass<br> 
 <hr>
 <h3>Connection to remote clients</h3>
 Generate SSH Keys on the control node and copy over to clients for password less SSH Connection
