@@ -78,3 +78,16 @@ ex: ansible all -m setup <br>
 
 rebooting client: <br>
 ex: ansible client1 -a "/sbin/reboot"<br>
+
+<hr>
+<h3>Roles</h3>
+Roles are helpful when managing different environment by same service.<br>
+Roles are like templet that are most of the time static and can be called by the playbooks. <br>
+
+Roles allow the entire configuration to ve grouped in: 
+<ol>
+<li>Tasks</li>
+<li>Modules</li>
+<li>Variables</li>
+<li>Handlers</li>
+<ol>
