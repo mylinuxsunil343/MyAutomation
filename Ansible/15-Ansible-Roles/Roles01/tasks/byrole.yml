@@ -1,0 +1,10 @@
+---
+- name: roles based on hosts
+  hosts: all
+  roles:
+  - FullInstall
+- name: basic install on localhost
+  hosts: localhost
+  roles:
+  - BasicInstall
+# If I do not need to open firewall in localhost

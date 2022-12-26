@@ -1,0 +1,20 @@
+---
+- name: Installing apach
+  yum:
+    name: httpd
+    state: present
+- name: starting service
+  services:
+    name: httpd
+    state: started
+- name: Starting firewall
+  firewalld:
+    service: httpd
+    permenent: true
+    state: enabled
+- name: reloading firewall
+  service:
+    name: firewalld
+    state: reloaded
+
+      
