@@ -45,7 +45,7 @@ Generate SSH Keys on the control node and copy over to clients for password less
 Syntax check: ansible-playbook playbook.yml --syntax-check
 
 <h3>Ansible Ad-hoc commands</h3>
-Adhoc commands you can use without need of playbooks    
-syntax: ansible [target] -m [module] -a "[module options]"  
-ex: ansible webservers -m ping
+Adhoc commands you can use without need of playbooks <br> 
+syntax: ansible [target] -m [module] -a "[module options]" <br>  
+ex: ansible webservers -m ping <br>
 ex: ansible webserrvers file -a "path=/home/sunil/sunil.txt state=touch mode=0755"
