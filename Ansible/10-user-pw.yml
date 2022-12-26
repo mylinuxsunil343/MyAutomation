@@ -1,0 +1,11 @@
+---
+- name: changing user password
+  hosts: local
+
+  tasks:
+  - name: changin g password for users
+    user:
+      name: splunk
+      update_password: always
+      password: "{{ newpassword|password_hash('sha512') }}"
+# ansible-playbook 10-user-pw.yml --extra-vars newpassword=xxxxxx
