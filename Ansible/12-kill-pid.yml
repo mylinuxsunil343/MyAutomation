@@ -1,0 +1,13 @@
+---
+- name: killing process running splunk
+  hosts: local
+  tasks:
+    - name: finding the process that need to kill
+      ignore_errors: true
+      shell: "ps -few | grep splunk | awk '{print $2}'"
+      register: running_process
+
+    - name: killing running running_process
+      ignore_errors: true
+      shell: "kill -9 {{ item }}"
+      with_items: "{{ running_process.stdout_lines }}"
