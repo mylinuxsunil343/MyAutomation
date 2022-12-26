@@ -1,0 +1,10 @@
+---
+- name: User account management
+  hosts: local
+
+  tasks:
+  - name: creating user splunk
+    user:
+      name: splunk
+      home: /home/splunk
+      shell: /bin/bash

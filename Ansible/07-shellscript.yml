@@ -1,6 +1,7 @@
 ---
 - name: Executing shell script remote / local
   hosts: local
+
   tasks:
-    - name: exec shell script
-      shell: "/home/sunil/Desktop/Sunil/Automation/MyAutomation/Ansible/myscript.sh"
+  - name: exec shell script
+    shell: "/home/sunil/Desktop/Sunil/Automation/MyAutomation/Ansible/myscript.sh"
