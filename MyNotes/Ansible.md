@@ -40,6 +40,7 @@ Syntax check: ansible-playbook playbook.yml --syntax-check
 Adhoc commands you can use without need of playbooks <br> 
 syntax: ansible [target] -m [module] -a "[module options]" <br>  
 
+
 Pinging servers<br>
 ex: ansible webservers -m ping <br>
 
@@ -51,3 +52,29 @@ ex: ansible webservers file -a "path=/home/sunil/sunil.txt state=absent"<br>
 
 Copying file <br>
 ex: ansible webservers copy -a "src=source dest=destination"<br>
+
+Installing package: <br>
+ex: ansible all -m yum -a "name=telnet state=present"<br>
+
+Deleting package: <br>
+ex: ansible all -m yum -a "name=telnet state=absent"<br>
+
+Starting and enabling service<br>
+ex: ansible all -m service -a "name=telnet state=started enabled=yes"<br>
+
+Checking status (Using shell module): <br>
+ex: ansible all -m shell -a "systemctl status telnet"<br>
+
+Creating user: <br>
+ex: ansible all -m user -a "name=splunk home=/home/splunk shell=/bin/bash state=present"<br>
+
+Deleting user: <br>
+ex: ansible all -m user -a "name=splunk home=/home/splunk shell=/bin/bash state=absent" <br>
+or<br>
+ec: ansible all -m shell -a "userdel splunk" <br>
+
+clients information: <br>
+ex: ansible all -m setup <br>
+
+rebooting client: <br>
+ex: ansible client1 -a "/sbin/reboot"<br>
