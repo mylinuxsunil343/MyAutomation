@@ -1,0 +1,19 @@
+---
+- name: downloading package from url
+  hosts: local
+
+  tasks:
+    - name: creating directory and updating permissions
+      file:
+        path: /home/Desktop/Sunil/Automation/splunk
+        state: directory
+        owner: sunil
+        group: sunil
+        mode: 0755
+    - name: downloading package from url
+      get_url:
+        url: xxxx
+        dest: /home/Desktop/Sunil/Automation/splunk
+        owner: sunil
+        group: sunil
+        mode: 0755

@@ -42,3 +42,4 @@ Generate SSH Keys on the control node and copy over to clients for password less
 </ol>
 <hr>
 <u>General</u>
+Syntax check: ansible-playbook playbook.yml --syntax-check
