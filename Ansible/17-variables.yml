@@ -3,6 +3,7 @@
   hosts: local
   vars:
     package_name: httpd
+    file_name: sunil
   
   tasks:
     - name: Package Installing
@@ -13,3 +14,7 @@
       service:
         name: "{{ package_name }}"
         state: started
+    - name: creating files
+      file:
+        state: touch
+        path: /tmp/"{{ file_name }}".txt

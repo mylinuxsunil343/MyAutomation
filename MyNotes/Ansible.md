@@ -117,3 +117,12 @@ Variables should always start with letter <br>
 Name can include letters, no's underscores <br>
 canot have . or - <br>
 can define inside inventory files as well<br>
+
+<hr>
+<h3>Handlers</h3>
+Handlers are executed at the end of the play once all tasks are finished.<br>
+Typically used to start, reload, restart or stopping service<br>
+<br>
+Sometime, you want to restart the service if config changes, but no when config not chnaged. <br>
+Handlers are tasks that only run when notified<br>
+Each handlers should have globally uniqe name<br>

@@ -1,0 +1,2 @@
+# /etc/ansible/hosts
+# server1 ansible_host=10.1.2.3

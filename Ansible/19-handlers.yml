@@ -1,0 +1,24 @@
+---
+- name: Installing httpd
+  hosts: all
+  tasks:
+    - name: Package Installing
+      yum:
+        name: httpd
+        state: latest
+    - name: changing httpd config
+      copy:
+        src: /tmp/httpd.conf
+        dest: /etc/httpd.conf
+      notify:
+        - Restart_httpd
+    - name: Apache status running
+      ansible.builtin.service:
+        name: https
+        state: started
+        
+  handlers:
+  - name: Restart_httpd
+    ansible.builtin.service:
+      name: httpd
+      state: reloaded
