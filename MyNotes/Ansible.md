@@ -90,7 +90,7 @@ Roles allow the entire configuration to ve grouped in:
 <li>Modules</li>
 <li>Variables</li>
 <li>Handlers</li>
-<ol>
+</ol>
 
 <hr>
 <h3>Tags</h3>
