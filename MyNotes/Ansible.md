@@ -102,3 +102,11 @@ ansible-playbook 16-ansible-tags.yml  --list-tags <br>
 <br>
 Running tags:<br>
 ansible-playbook 16-ansible-tags.yml -t i-httpd <br>
+<br>
+To skip task
+ansible-playbook 16-ansible-tags.yml --skip-tags i-httpd
+
+<hr>
+<h3>Tasks</h3>
+Tasks are different to tag. This will ask ansible to start the task from perticular point. <br>
+ex: ansible-playbook 16-ansible-tags.yml --start-at-task "Start httpd"<br>
