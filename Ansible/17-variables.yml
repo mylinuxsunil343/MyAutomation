@@ -1,0 +1,15 @@
+---
+- name: Installing httpd
+  hosts: local
+  vars:
+    package_name: httpd
+  
+  tasks:
+    - name: Package Installing
+      yum:
+        name: "{{ package_name }}"
+        state: present
+    - name: Start service
+      service:
+        name: "{{ package_name }}"
+        state: started

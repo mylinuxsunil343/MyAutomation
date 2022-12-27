@@ -110,3 +110,10 @@ ansible-playbook 16-ansible-tags.yml --skip-tags i-httpd
 <h3>Tasks</h3>
 Tasks are different to tag. This will ask ansible to start the task from perticular point. <br>
 ex: ansible-playbook 16-ansible-tags.yml --start-at-task "Start httpd"<br>
+
+<hr>
+<h3>Variables</h3>
+Variables should always start with letter <br>
+Name can include letters, no's underscores <br>
+canot have . or - <br>
+can define inside inventory files as well<br>
