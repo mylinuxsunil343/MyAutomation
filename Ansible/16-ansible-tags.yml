@@ -1,0 +1,17 @@
+---
+- name: Installing appache server
+  hosts: local
+  tasks:
+    - name: Install appache
+      yum:
+        name: httpd
+        state: present
+      tags: i-httpd
+
+    - name: Start httpd
+      service:
+        name: httpd
+        state: started
+      tags: s-httpd
+# ansible-playbook 16-ansible-tags.yml  --list-tags
+# ansible-playbook 16-ansible-tags.yml -t i-httpd 

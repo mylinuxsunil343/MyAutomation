@@ -91,3 +91,13 @@ Roles allow the entire configuration to ve grouped in:
 <li>Variables</li>
 <li>Handlers</li>
 <ol>
+
+<hr>
+Tags: reference or alias of a task <br>
+Instead of runnign entire playbook, add tags to a task you need to run <br>
+
+List tags:<br>
+ansible-playbook 16-ansible-tags.yml  --list-tags <br>
+
+Running tags:<br>
+ansible-playbook 16-ansible-tags.yml -t i-httpd <br>
