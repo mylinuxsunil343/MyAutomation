@@ -93,3 +93,12 @@ echo "Ansible SSH will not prompt yes or no"
 echo -e "[defaults]
 inventory = /home/sunil/Desktop/Sunil/Automation/MyAutomation/Ansible/Web/Demo/Inventory/inventory
 host_key_checking = False" >> /etc/ansible/ansible.cfg
+echo "Ansible hosts config"
+echo -e "[local]
+localhost ansible_connection=local" >> /etc/ansible/hosts
+echo "------------------------Testing softwares------------------------------"
+echo "Docker hello world"
+docker run hello-world
+echo "Python hello world"
+echo "Ansible ping test"
+ansible localhost -a "/bin/echo hello world"
