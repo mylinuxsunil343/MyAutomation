@@ -152,5 +152,18 @@ Creating password protected ansinle file: <b>
 ansible-vault create 23-vault.yml <br>
 Password used: changeme <br>
 
-To run playbook which is password protected: <b>
-ansible-playbookk 23-vault.yml --ask-vault-pass <b>
+To run playbook which is password protected: <br>
+ansible-playbookk 23-vault.yml --ask-vault-pass <br>
+
+To view the vault protected yaml file:<br>
+ansible-vault view 23-vault.yml<br>
+
+To edit the vault protected yaml file:<br>
+ansible-vault edit 23-vault.yml <br>
+
+To convert existing yaml file to vault protected: <br>
+ansible-vault encrypt 21-loops.yml
+
+To convert existing vault protected yaml file to normal file: <br>
+ansible-vault decrypt 21-loops.yml<br>
+
