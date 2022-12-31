@@ -1,6 +1,6 @@
 ---
 - name: "My first playbook, press ctrl+shift+p"
-  hosts: localhost
+  hosts: local
 
   tasks:
     - name: "test connectivity"
