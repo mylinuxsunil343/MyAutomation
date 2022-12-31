@@ -144,3 +144,13 @@ ex:<br>
 <hr>
 <h3>Loops</h3>
 Enables you to execute set of commands repeatdly until condition met
+<hr>
+<h3>Ansible Vault</h3>
+Ansible vault feature which will password protect your code. <br>
+
+Creating password protected ansinle file: <b>
+ansible-vault create 23-vault.yml <br>
+Password used: changeme <br>
+
+To run playbook which is password protected: <b>
+ansible-playbookk 23-vault.yml --ask-vault-pass <b>
