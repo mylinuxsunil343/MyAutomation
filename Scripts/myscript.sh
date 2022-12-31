@@ -89,3 +89,7 @@ git config --global user.email "mylinux.sunil343@gmail.com"
 echo "resolving docker.socket issue"
 sudo chown sunil:docker /var/run/docker.sock
 docker context use default
+echo "Ansible SSH will not prompt yes or no"
+echo -e "[defaults]
+inventory = /home/sunil/Desktop/Sunil/Automation/MyAutomation/Ansible/Web/Demo/Inventory/inventory
+host_key_checking = False" >> /etc/ansible/ansible.cfg
