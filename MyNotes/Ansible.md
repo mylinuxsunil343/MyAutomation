@@ -126,3 +126,10 @@ Typically used to start, reload, restart or stopping service<br>
 Sometime, you want to restart the service if config changes, but no when config not chnaged. <br>
 Handlers are tasks that only run when notified<br>
 Each handlers should have globally uniqe name<br>
+
+<hr>
+<h3>Conditions</h3>
+Conditions allow ansible to take action based on certain condition.<br>
+ex: Install yum package if OS is centos/fedora<br>
+
+Use when statement to make ansible more smarter<br>

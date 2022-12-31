@@ -1,0 +1,15 @@
+---
+- name: Installing software based on condition
+  hosts: localhost
+
+  tasks:
+    - name: Installing apache centos/Fedora
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+      when: ansible_os_family == "RedHat"
+    - name: Installing apache ubuntu
+      ansible.builtin.dnf:
+        name: apache2
+        state: present
+      when: ansible_os_family == "Ubuntu"
