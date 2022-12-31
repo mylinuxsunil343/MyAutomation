@@ -166,4 +166,11 @@ ansible-vault encrypt 21-loops.yml
 
 To convert existing vault protected yaml file to normal file: <br>
 ansible-vault decrypt 21-loops.yml<br>
+<hr>
+<h3>encrypt string </h3>
+ansible-valut encrypt_string <<Name of string>> <br>
+enter the password and copy encrypted value, paste in the code. <br>
 
+You can decrypt the string (Ex code: 24-encrypt-string.yml) <br>
+
+ansible-playbook 24-encrypt-string.yml --ask-vault-pass<br>

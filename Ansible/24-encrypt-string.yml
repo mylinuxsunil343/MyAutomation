@@ -1,0 +1,19 @@
+# ansible-vault encrypt_string httpd
+# password changeme
+# ansible-playbook 24-encrypt-string.yml --ask-vault-pass
+# to decrypt the secret value
+---
+- name:  Test encrypted output
+  hosts: localhost
+  vars:
+    secret: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66663034313436346663303636663037353334326365393234353065316330333132613138306335
+          3063616565613437633330616336383137663138366461380a626531313136626535313938323962
+          38633639613965623361663230396164616532323165383663643765643036626464393837623536
+          6332353232346332640a393430646164363366643037653831313532333837333837303638663432
+          6363
+  tasks:
+    - name: print encrypted value
+      debug:
+        var: secret
