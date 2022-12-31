@@ -102,3 +102,15 @@ docker run hello-world
 echo "Python hello world"
 echo "Ansible ping test"
 ansible localhost -a "/bin/echo hello world"
+echo "-----------------------default browser settings-----------------------"
+echo "Removing firefox"
+dnf -y remove firefox
+echo "default browser $(xdg-settings get default-web-browser)"
+if [[ $(xdg-settings get default-web-browser) != "google-chrome.desktop" ]]
+    then
+    echo "Setting google-chrome as a defualt broswer"
+    xdg-settings set default-web-browser google-chrome.desktop
+    else
+    echo "Google chrome is already your default broswer"
+fi
+
