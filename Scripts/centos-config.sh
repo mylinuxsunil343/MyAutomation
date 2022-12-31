@@ -1,18 +1,27 @@
 #!/bin/bash
+banner()
+{
+  echo "+------------------------------------------+"
+  printf "| %-40s |\n" "`date`"
+  echo "|                                          |"
+  printf "|`tput bold` %-40s `tput sgr0`|\n" "$@"
+  echo "+------------------------------------------+"
+}
+banner "Hi, Sunil Marella/n checking system details"
 echo "Linux kernal : $(uname -or)"
 echo "Using $(getconf LONG_BIT) bit Linux distro."
 
 echo "Changing to download directory"
 echo "updating system"
 dnf -y update; dnf -y upgrade
-echo "-------------------Mandatory software installation-------------------------"
+Banner "Mandatory software installation"
 cd /home/sunil/Downloads/
 echo "Installing yum-utils, epel repos"
 dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 yum -y install yum-utils
 echo "Installing necessary sw for virtualbox guest additions"
 dnf -y install gcc kernel-devel kernel-headers make bzip2 perl
-echo "-------------------------Creating / updating repos--------------------------"
+banner "Creating / updating repos"
 echo "Adding docker repo"
 if [[ ! -e /etc/yum.repos.d/docker-ce.repo ]]; then
       echo "Docker repo File does not exist, creating docker repo"
@@ -29,7 +38,7 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 echo "Updating Jenkins repo"
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-echo "-----------------------Installing all softwares detaiils--------------------"
+banner "Installing all softwares detaiils"
 echo "Installing google chrome"
 dnf -y install google-chrome-stable
 echo "Installing ansible"
@@ -46,16 +55,17 @@ echo "Installing Open java 11"
 dnf -y install java-11-openjdk
 echo "Installing jenkins"
 dnf -y install jenkins
-echo "------------------------All version detaiils---------------------------"
+banner "All version detaiils"
 echo "Ansible version $(ansible --version)"
 echo "git version $(git --version)"
 echo "Docker version $(docker --version)"
 echo "Python3 version $(python3 --version)"
 echo "Google Chrome version $(google-chrome --version)"
-echo "----------------------Updating system, reboot after script-------------"
+echo "Java version $(java --version)"
+banner "Updating system, reboot after script"
 echo "updating system"
 dnf -y update; dnf -y upgrade
-echo "----------------------Starting services-------------------------------"
+banner "Starting services"
 echo "Starting docker service"
 systemctl start docker
 echo "Enabling docker service"
@@ -66,7 +76,7 @@ echo "Enabling jenkins service"
 systemctl enable jenkins
 echo "Reloading services"
 systemctl daemon-reload
-echo "-------------------------Enabling firewall------------------------------"
+banner "Enabling firewall"
 YOURPORT=8080
 PERM="--permanent"
 SERV="$PERM --service=jenkins"
@@ -78,11 +88,11 @@ firewall-cmd $SERV --add-port=$YOURPORT/tcp
 firewall-cmd $PERM --add-service=jenkins
 firewall-cmd --zone=public --add-service=http --permanent
 firewall-cmd --reload
-echo "-------------------------Status checks----------------------------------"
+banner "Status checks"
 echo "Docker service status $(systemctl show -p SubState --value docker)"
 echo "Jenkins service status $(systemctl show -p SubState --value jenkins)"
 echo "Firewalld service status $(systemctl show -p SubState --value firewalld)"
-echo "------------------------final configurations----------------------------"
+banner "final configurations"
 echo "Configuring git services"
 git config --global user.name "Sunil Marella"
 git config --global user.email "mylinux.sunil343@gmail.com"
@@ -96,13 +106,15 @@ host_key_checking = False" >> /etc/ansible/ansible.cfg
 echo "Ansible hosts config"
 echo -e "[local]
 localhost ansible_connection=local" >> /etc/ansible/hosts
-echo "------------------------Testing softwares------------------------------"
+echo "current host name : $(hostname)"
+hostnamectl set-hostname marellasunil
+banner "Testing softwares"
 echo "Docker hello world"
 docker run hello-world
 echo "Python hello world"
 echo "Ansible ping test"
 ansible localhost -a "/bin/echo hello world"
-echo "-----------------------default browser settings-----------------------"
+banner "default browser settings"
 echo "Removing firefox"
 dnf -y remove firefox
 echo "default browser $(xdg-settings get default-web-browser)"
@@ -113,5 +125,6 @@ if [[ $(xdg-settings get default-web-browser) != "google-chrome.desktop" ]]
     else
     echo "Google chrome is already your default broswer"
 fi
-echo "----------------------------Cleaning---------------------------------"
+banner "Cleaning"
 dnf -y autoremove
+banner "The End"
