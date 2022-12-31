@@ -113,4 +113,5 @@ if [[ $(xdg-settings get default-web-browser) != "google-chrome.desktop" ]]
     else
     echo "Google chrome is already your default broswer"
 fi
-
+echo "----------------------------Cleaning---------------------------------"
+dnf -y autoremove
