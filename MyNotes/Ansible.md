@@ -133,3 +133,11 @@ Conditions allow ansible to take action based on certain condition.<br>
 ex: Install yum package if OS is centos/fedora<br>
 
 Use when statement to make ansible more smarter<br>
+
+To know host details: <br>
+ansible localhost -m setup<br>
+You can find lot of information about os/host name through ansible built in functions. <br>
+ex:<br>
+"ansible_nodename": "marellasunil",<br>
+"ansible_os_family": "RedHat",<br>
+"ansible_pkg_mgr": "dnf",<br>
