@@ -148,7 +148,7 @@ Enables you to execute set of commands repeatdly until condition met
 <h3>Ansible Vault</h3>
 Ansible vault feature which will password protect your code. <br>
 
-Creating password protected ansinle file: <b>
+Creating password protected ansinle file: <br>
 ansible-vault create 23-vault.yml <br>
 Password used: changeme <br>
 
