@@ -141,3 +141,6 @@ ex:<br>
 "ansible_nodename": "marellasunil",<br>
 "ansible_os_family": "RedHat",<br>
 "ansible_pkg_mgr": "dnf",<br>
+<hr>
+<h3>Loops</h3>
+Enables you to execute set of commands repeatdly until condition met

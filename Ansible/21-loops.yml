@@ -1,0 +1,21 @@
+---
+- name: Creating multiple users through loops
+  hosts: local
+  vars:
+    users: [dev01, dev02, dev03]
+  tasks:
+  - name: Creating dev users through loops
+    user:
+      name: " {{ item }}"
+    loop:
+      - splunk
+      - jenkins
+      - docker
+  - name: creating users through vaiables
+    user:
+      name: '{{ item }}'
+    with_items: '{{users}}' # calling variables
+# single quotes or double quotes eitherways items works 
+  - name: creating users through variables calling directly
+    user:
+      name: '{{ users }}' # calling variables

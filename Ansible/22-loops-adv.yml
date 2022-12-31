@@ -1,0 +1,32 @@
+---
+- name: checkinf service status using loops
+  hosts: localhost
+  become_user: yes
+  tasks:
+    - name: service status
+      command: systemctl status '{{ item }}'
+      with_items:
+        - splunk.service
+        - docker.service
+        - jenkins.service
+      register: result
+      ignore_errors: yes
+    - name: showing results
+      debug:
+        var: result
+    - name: Add users and tag them to groups. multiple variables
+      ansible.builtin.user:
+        name: '{{ item.name }}'
+        state: present
+        groups: '{{ item.groups }}'
+      loop:
+        - { name: 'sunil', groups: 'wheel'}
+        - { name: 'splunk', groups: 'user'}
+    - name: Using dictionaries
+      ansible.builtin.debug:
+        msg: "{{ item.key }} - {{ item.value }}"
+      loop: "{{ tag_data | dict2items }}" # Use the dict2items filter to transform a dictionary into a list of items suitable for looping
+        vars:
+        tag_data:
+          Environment: dev
+          Application: payment
