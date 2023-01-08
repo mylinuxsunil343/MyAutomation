@@ -76,9 +76,19 @@ You can use the git checkout command to: <br>
 <li>Revert uncommitted changes</li>
 </ul>
 <b>Note</b> − We can perform all these operations before commit.<br>
-
+<br>
 <b>Remove changes from staging area</b><br>
 
 when we perform an add operation, the files move from the local repository to the stating area. If a user accidently modifies a file and adds it into the staging area, he can revert his changes, by using the git checkout command.<br>
 
 In Git, there is one HEAD pointer that always points to the latest commit. If you want to undo a change from the staged area, then you can use the git checkout command, but with the checkout command, you have to provide an additional parameter, i.e., the HEAD pointer. The additional commit pointer parameter instructs the git checkout command to reset the working tree and also to remove the staged changes.<br>
+<br>
+Command: <code>git checkout HEAD -- << file name >> </code><br>
+<br>
+
+<b>Git HEAD Options</b>
+<ul>
+<li>Soft: <b>reset</b> the HEAD pointer only without destroying anything</li>
+<li>Mixed: <b>reverts</b> the changes from the staging area only. The actual changes made to the working copy of the file are <b>unaffected</b>. </li>
+<li>Hard: <b>Clear</b> staging area, <b>reset</b> the HEAD pointer to the latest commit, <b>delete</b> local file changes too</li>
+</ul>
