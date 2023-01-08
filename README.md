@@ -7,5 +7,6 @@
 <li>AWS</li>
 <li>Linux</li>
 <li>Git</li>
+<li>Go</li>
 <li>Code</li>
 </ul>
