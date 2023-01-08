@@ -7,7 +7,7 @@ Types of VCS −
 </ul>
 <hr>
 
-# Git
+# Git Terminology
 <ul>
 <li><b>Blobs:</b> Binary large objects, each version of a file represent blob. A blob holds the file data but doesn’t contain any metadata about the file.</li>
 <li><b>Trees: </b>Tree is an object, it holds blob as well as other directories </li>
@@ -18,4 +18,6 @@ Types of VCS −
 <li><b>Pull: </b>Pull opertaion copies the changes from a remote repository instance to a local one</li>
 <li><b>Push: </b>Push operation copies changes from a local repository instance to a remote one</li>
 <li><b>HEAD: </b>HEAD is a pointer, which always points to the latest commit in the branch</li>
+<li><b>Revision: </b>Revision represents the version of the source code</li>
+<li><b>URL: </b>URL represents the location of the Git repository. (Command: <code>cat .git/config</code>)</li>
 </ul>
