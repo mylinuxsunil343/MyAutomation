@@ -88,7 +88,20 @@ Command: <code>git checkout HEAD -- << file name >> </code><br>
 
 <b>Git HEAD Options</b>
 <ul>
-<li><b><u>Soft:</u>reset</b> the HEAD pointer only without destroying anything</li>
-<li><b><u>Mixed: </u>reverts</b> the changes from the staging area only. The actual changes made to the working copy of the file are <b>unaffected</b>. </li>
-<li><b><u>Hard: </u>Clear</b> staging area, <b>reset</b> the HEAD pointer to the latest commit, <b>delete</b> local file changes too</li>
+<li><b>Soft:</b>reset the HEAD pointer only without destroying anything</li>
+<li><b>Mixed: </b>reverts the changes from the staging area only. The actual changes made to the working copy of the file are <b>unaffected</b>. </li>
+<li><b>Hard: </b>Clear staging area, <b>reset</b> the HEAD pointer to the latest commit, <b>delete</b> local file changes too</li>
 </ul>
+<hr>
+
+# Git Tags
+Tag operations allows giving a meaningful names to s specific version in the respoitory.<br>
+Provide a tag name with -a option and provides a tag message with –m option.<br>
+<b>commands:</b><br> 
+Tagging the current push: <code>git tag -a 'Release_2023_Jan_08' -m 'January 2023 release' </code><br>
+Push to origin: <code>git push origin Release_2023_Jan_08</code><br>
+list all tags: <code>git tag -l</code><br>
+More details of the tag: <code>git show Release_2023_Jan_08</code><br>
+Deleting tags: <code>git tag -d Release_2023_Jan_08</code><br>
+
+
