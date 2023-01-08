@@ -25,12 +25,12 @@ Displaying docker images: <code>docker images</code><br>
 </ul>
 
 <b>Commands:</b><br>
-Downloading docker images: <code>docker run <<-image name->></code><br>
+- Downloading docker images: <code>docker run <<-image name->></code><br>
 Ex: <code>docker run centos</code><br>
-Removing images: <code>docker rmi <<-Image name or Image ID->></code><br>
-To return image ID only <code> docker images -q </code><br>
-Details of an image or container <code> docker inspect <<-image name or image ID->></code><br>
-Hisotry of docker image: <code>docker history <<-image->></code>. This will show all the commands that were run against the image<br>
+- Removing images: <code>docker rmi <<-Image name or Image ID->></code><br>
+- To return image ID only <code> docker images -q </code><br>
+- Details of an image or container <code> docker inspect <<-image name or image ID->></code><br>
+- Hisotry of docker image: <code>docker history <<-image->></code>. This will show all the commands that were run against the image<br>
 <hr>
 
 # Docker Containers
