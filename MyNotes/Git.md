@@ -22,6 +22,8 @@ Types of VCS −
 <li><b>URL: </b>URL represents the location of the Git repository. (Command: <code>cat .git/config</code>)</li>
 </ul>
 <hr>
+
 # Git initial configuration
 <code>git config --global user.name "your name"</code><br>
 <code>git config --global user.email "your email"</code><br>
+<code>git config --list</code><br>
