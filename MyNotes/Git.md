@@ -30,4 +30,5 @@ Types of VCS −
 <hr>
 
 # Git work Flow
-<img src="git-work-flow.jpg">Git Work Flow</img>
+<img src="git-work-flow.jpg">
+<hr>
