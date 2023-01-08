@@ -59,7 +59,7 @@ remove the changes from the stack and place them in the current working director
 # Git move/remove commands
 Moves a directory or a file from one location to another.<br>
 Moving a file:<code>git mv << filename >> data/ </code><br>
-Removing a file: <code>git rm << file name >>
+Removing a file: <code>git rm << file name >> </code>
 
 Commit and push to origin to make move or remove permenent <br>
 <hr>
