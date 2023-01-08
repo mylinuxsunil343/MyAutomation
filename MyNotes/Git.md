@@ -56,6 +56,22 @@ List all stashes: <code>git stash list</code><br>
 remove the changes from the stack and place them in the current working directory: <code>git stash pop</code><br>
 <hr>
 
-# Git move commands
+# Git move/remove commands
 Moves a directory or a file from one location to another.<br>
-<code>git mv << filename >> data/ </code><br>
+Moving a file:<code>git mv << filename >> data/ </code><br>
+Removing a file: <code>git rm << file name >>
+
+Commit and push to origin to make move or remove permenent <br>
+<hr>
+
+# Revet uncommited changes
+Undo the modifications that have been made to the local repository. <br>
+Suppose the user accidentally does some changes to his local repository and then wants to undo these changes. In such cases, the revert operation plays an important role.<br>
+
+<b>Revert Uncommitted Changes</b>
+Command: <code>git checkout << file name >></code><br>
+You can use the git checkout command to: <br>
+<ul>
+<li>obtain a deleted file from the local repository.</li>
+<li>Revert uncommitted changes</li>
+</ul>
