@@ -24,7 +24,7 @@ Displaying docker images: <code>docker images</code><br>
 <li><b>Virtual Size</b> − The size of the image.</li>
 </ul>
 
-<b>Commands:</b>
+<b>Commands:</b><br>
 Downloading docker images: <code>docker run <<-image name->></code><br>
 Ex: <code>docker run centos</code><br>
 Removing images: <code>docker rmi <<-Image name or Image ID->></code><br>
@@ -35,6 +35,8 @@ Hisotry of docker image: <code>docker history <<-image->></code>. This will show
 
 # Docker Containers
 
-Docker container shell script: <code>docker run -it centos /bin/bash</code><br>
-Listing containers (Only running): <code>docker ps</code><br>
-Listing all containers (Including dorment): <code>docker ps -a</code><br>
+- Docker container shell script: <code>docker run -it centos /bin/bash</code><br>
+- Listing containers (Only running): <code>docker ps</code><br>
+- Listing all containers (Including dorment): <code>docker ps -a</code><br>
+- Delete all inactive / dormant containers: <code>docker container prune</code><br>
+- Top process running within container: <code>docker top <<-containerID or name->></code><br>
