@@ -132,3 +132,10 @@ The Git merge command tries to put the commits from other branches on top of the
 The Git rebase command tries to find out the common ancestor between the current local branch and the merge branch. It then pushes the commits to the local branch by modifying the order of commits in the current local branch. For example, if your local branch has commits A−>B−>C−>D and the merge branch has commits A−>B−>X−>Y, then Git rebase will convert the current local branch to something like A−>B−>X−>Y−>C−>D.<br>
 <br>
 When multiple developers work on a single remote repository, you cannot modify the order of the commits in the remote repository. In this situation, you can use rebase operation to put your local commits on top of the remote repository commits and you can push these changes.<br>
+<hr>
+
+# Git Handling conflicts
+
+Error message: CONFLICT (content): Merge conflict in XXXX<br>
+Check differences using <code>git diff</code> command
+Use <code>git commit -a -m 'Resolved conflict'</code>
