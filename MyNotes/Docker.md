@@ -23,3 +23,7 @@ Displaying docker images: <code>docker images</code><br>
 <li><b>Created</b> − The number of days since the image was created.</li>
 <li><b>Virtual Size</b> − The size of the image.</li>
 </ul>
+
+Downloading docker images: <code>docker run << image name >></code>
+Ex: <code>docker run centos</code>
+Removing images: <code>docker rmi <<-image name->></code>
