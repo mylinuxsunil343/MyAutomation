@@ -4,8 +4,9 @@ Types of VCS −
 <ul>
 <li>Centralized version control system (CVCS).</li>
 <li>Distributed/Decentralized version control system (DVCS).</li>
-<ul>
-<br>
+</ul>
+<hr>
+
 # Git
 <ul>
 <li><b>Blobs:</b> Binary large objects, each version of a file represent blob. A blob holds the file data but doesn’t contain any metadata about the file.</li>
