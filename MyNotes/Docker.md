@@ -40,3 +40,5 @@ Ex: <code>docker run centos</code><br>
 - Listing all containers (Including dorment): <code>docker ps -a</code><br>
 - Delete all inactive / dormant containers: <code>docker container prune</code><br>
 - Top process running within container: <code>docker top <<-containerID or name->></code><br>
+- Stopping container: <code>docker stop <<-container ID or name->></code>
+- Removing container: <code>docker rm <<-container ID or name->></code>
