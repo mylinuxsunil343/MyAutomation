@@ -8,3 +8,7 @@ func main() {
 }
 
 // go run 01-hello.go
+// Single line comment
+/*  Multi
+line
+comment */

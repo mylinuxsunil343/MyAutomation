@@ -8,3 +8,13 @@
 
 <b>Terminal</b><br>
 go run 01-hello.go<br>
+<hr>
+A Go program basically consists of the following parts<br>
+<ul>
+<li>Package Declaration</li>
+<li>Import Packages</li>
+<li>Functions</li>
+<li>Variables</li>
+<li>Statements and Expressions</li>
+<li>Comments</li>
+</ul>
