@@ -42,3 +42,8 @@ Ex: <code>docker run centos</code><br>
 - Top process running within container: <code>docker top <<-containerID or name->></code><br>
 - Stopping container: <code>docker stop <<-container ID or name->></code>
 - Removing container: <code>docker rm <<-container ID or name->></code>
+- statistics of a running container: <code>docker stats <<-container ID or name->></code>
+- Attaching container: <code>docker attach <<-container ID or name->></code>, then run top cpmmand to see container stats.
+- pause the processes in a running container <code>docker pause <<-container ID or name->></code>
+- unpause the processes in a running container <code>docker unpause <<-container ID or name->></code>
+- kill the processes in a running container <code>docker kill <<-container ID or name->></code>
