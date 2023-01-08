@@ -103,5 +103,32 @@ Push to origin: <code>git push origin Release_2023_Jan_08</code><br>
 list all tags: <code>git tag -l</code><br>
 More details of the tag: <code>git show Release_2023_Jan_08</code><br>
 Deleting tags: <code>git tag -d Release_2023_Jan_08</code><br>
+<hr>
 
+# Git Patch operations
 
+Patch is a text file, whose contents are similar to Git diff, but along with code, it also has metadata about commits; e.g., commit ID, date, commit message, etc. We can create a patch from commits and other people can apply them to their repository.<br>
+<hr>
+
+# Git Branches
+
+<b>Commands:</b><br>
+Create branch: <code>git branch branch-name</code><br>
+Current branch: <code>git branch</code><br>
+Switch between branches: <code>git checkout new_branch</code><br>
+creates a new branch and immediately switches to the new branch<code>git checkout -b test_branch</code><br>
+Delete branches<code>git branch -D test_branch</code><br>
+Rename branch: <code>git branch -m new_branch newest_branch</code><br>
+Merging branch: first switch to a branch andpush to another branch <code>git push origin newest_branch</code><br>
+Check changes to other branch: <code>git log origin/newest_branch -2</code> 
+ merging his branch with the master branch.<code>git merge origin/newest_branch</code><br>
+<hr>
+
+# Rebase Branches
+The Git rebase command is a branch merge command, but the difference is that it modifies the order of commits.<br>
+<br>
+The Git merge command tries to put the commits from other branches on top of the HEAD of the current local branch. For example, your local branch has commits A−>B−>C−>D and the merge branch has commits A−>B−>X−>Y, then git merge will convert the current local branch to something like A−>B−>C−>D−>X−>Y<br>
+<br>
+The Git rebase command tries to find out the common ancestor between the current local branch and the merge branch. It then pushes the commits to the local branch by modifying the order of commits in the current local branch. For example, if your local branch has commits A−>B−>C−>D and the merge branch has commits A−>B−>X−>Y, then Git rebase will convert the current local branch to something like A−>B−>X−>Y−>C−>D.<br>
+<br>
+When multiple developers work on a single remote repository, you cannot modify the order of the commits in the remote repository. In this situation, you can use rebase operation to put your local commits on top of the remote repository commits and you can push these changes.<br>
