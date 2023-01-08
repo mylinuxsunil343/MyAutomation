@@ -88,7 +88,7 @@ Command: <code>git checkout HEAD -- << file name >> </code><br>
 
 <b>Git HEAD Options</b>
 <ul>
-<li>Soft: <b>reset</b> the HEAD pointer only without destroying anything</li>
-<li>Mixed: <b>reverts</b> the changes from the staging area only. The actual changes made to the working copy of the file are <b>unaffected</b>. </li>
-<li>Hard: <b>Clear</b> staging area, <b>reset</b> the HEAD pointer to the latest commit, <b>delete</b> local file changes too</li>
+<li><b<<u>Soft:</u>reset</b> the HEAD pointer only without destroying anything</li>
+<li><b<<u>Mixed: </u>reverts</b> the changes from the staging area only. The actual changes made to the working copy of the file are <b>unaffected</b>. </li>
+<li><b<<u>Hard: </u>Clear</b> staging area, <b>reset</b> the HEAD pointer to the latest commit, <b>delete</b> local file changes too</li>
 </ul>
