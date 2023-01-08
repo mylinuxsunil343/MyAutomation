@@ -38,6 +38,9 @@ Initilising repository: <code>git init</code><br>
 Git Status: <code>git status -s</code><br>
 Git add current changes: <code>git add .</code><br>
 Git commit: <code>git commit -m 'Initial commit' </code><br>
-Git logs: <code>git log</code><br>
+Git logs & commit info: <code>git log</code><br>
 Git remote origin: <code>git remote add origin gituser@git.server.com:project.git</code><br>
 Git merge to origin: <code>git push origin master</code><br>
+Git clone: <code>git clone gituser@git.server.com:project.git</code><br>
+Commit details: <code>git log</code> to see commits. <code>git show commit-id</code><br>
+To review changes: <code>git diff</code><br>
