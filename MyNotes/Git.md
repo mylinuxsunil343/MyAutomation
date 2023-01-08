@@ -44,3 +44,18 @@ Git merge to origin: <code>git push origin master</code><br>
 Git clone: <code>git clone gituser@git.server.com:project.git</code><br>
 Commit details: <code>git log</code> to see commits. <code>git show commit-id</code><br>
 To review changes: <code>git diff</code><br>
+<hr>
+
+# Git Stash commands
+
+If you change your code but do not want to commit for some time, stash the changes, so will be stored in temporary space and commit later.<br>
+
+Git stash the chnages: <code>git stash</code><br>
+Git stash status: <code>git status -s</code><br>
+List all stashes: <code>git stash list</code><br>
+remove the changes from the stack and place them in the current working directory: <code>git stash pop</code><br>
+<hr>
+
+# Git move commands
+Moves a directory or a file from one location to another.<br>
+<code>git mv << filename >> data/ </code><br>
