@@ -24,6 +24,8 @@ Displaying docker images: <code>docker images</code><br>
 <li><b>Virtual Size</b> − The size of the image.</li>
 </ul>
 
-Downloading docker images: <code>docker run << image name >></code>
-Ex: <code>docker run centos</code>
-Removing images: <code>docker rmi <<-image name->></code>
+Downloading docker images: <code>docker run <<-image name->></code><br>
+Ex: <code>docker run centos</code><br>
+Removing images: <code>docker rmi <<-Image name or Image ID->></code><br>
+To return image ID only <code> docker images -q </code><br>
+Details of an image or container <code> docker inspect <<-image name or image ID->></code><br>
