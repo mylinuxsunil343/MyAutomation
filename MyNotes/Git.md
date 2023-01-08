@@ -27,3 +27,7 @@ Types of VCS −
 <code>git config --global user.name "your name"</code><br>
 <code>git config --global user.email "your email"</code><br>
 <code>git config --list</code><br>
+<hr>
+
+# Git work Flow
+<img src="git-work-flow.jpg">Git Work Flow</img>
