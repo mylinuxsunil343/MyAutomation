@@ -47,3 +47,7 @@ Ex: <code>docker run centos</code><br>
 - pause the processes in a running container <code>docker pause <<-container ID or name->></code>
 - unpause the processes in a running container <code>docker unpause <<-container ID or name->></code>
 - kill the processes in a running container <code>docker kill <<-container ID or name->></code>
+
+# Docker Architecture vs VM
+
+<image src="docker-arch.jpg">
