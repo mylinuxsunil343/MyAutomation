@@ -68,10 +68,17 @@ Commit and push to origin to make move or remove permenent <br>
 Undo the modifications that have been made to the local repository. <br>
 Suppose the user accidentally does some changes to his local repository and then wants to undo these changes. In such cases, the revert operation plays an important role.<br>
 
-<b>Revert Uncommitted Changes</b>
+<b>Revert Uncommitted Changes</b><br>
 Command: <code>git checkout << file name >></code><br>
 You can use the git checkout command to: <br>
 <ul>
 <li>obtain a deleted file from the local repository.</li>
 <li>Revert uncommitted changes</li>
 </ul>
+<b>Note</b> − We can perform all these operations before commit.<br>
+
+<b>Remove changes from staging area</b><br>
+
+when we perform an add operation, the files move from the local repository to the stating area. If a user accidently modifies a file and adds it into the staging area, he can revert his changes, by using the git checkout command.<br>
+
+In Git, there is one HEAD pointer that always points to the latest commit. If you want to undo a change from the staged area, then you can use the git checkout command, but with the checkout command, you have to provide an additional parameter, i.e., the HEAD pointer. The additional commit pointer parameter instructs the git checkout command to reset the working tree and also to remove the staged changes.<br>
