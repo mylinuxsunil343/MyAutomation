@@ -5,20 +5,16 @@ Store all your images
 - Tagging an image <code>docker tag imageID Repositoryname</code>
 - Storing custom image in docker hub <code>docker push Repositoryname</code>
 
+# Docker basic commands
+
+- version <code>docker version</code>
+- Info <code>docker info</code>
+
 # Docker Images
 Hello world - <code>docker run hello-world</code><br>
 CentOs - <code>docker run -it centos /bin/bash</code><br>
 
 -it is used to mention that we want to run in interactive mode.<br>
-
-
-<hr>
-Usually you need to use sudo / run docker as a root. If you run as a normal user, you will get an error "docker.socket issue". <br>
-
-execute below commands to run as a user.<br>
-<code>sudo chown sunil:docker /var/run/docker.sock</code><br>
-<code>docker context use default</code><br>
-<hr>
 
 Displaying docker images: <code>docker images</code><br>
 <ul>
