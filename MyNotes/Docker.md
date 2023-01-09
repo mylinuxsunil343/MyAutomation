@@ -60,8 +60,8 @@ Ex: <code>docker run centos</code><br>
 
 # Docker file
 
-<code>
-FROM ubuntu <br>
+Sample code: <br>
+<code>FROM ubuntu <br>
 <br>
 RUN apt-get update <br> 
 RUN apt-get install –y nginx<br> 
