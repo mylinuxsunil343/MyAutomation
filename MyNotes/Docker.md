@@ -36,9 +36,9 @@ Ex: <code>docker run centos</code><br>
 # Docker Containers
 
 - Docker container shell script: <code>docker run -it centos /bin/bash</code><br>
-- Listing containers (Only running): <code>docker ps</code><br>
-- Listing all containers (Including dorment): <code>docker ps -a</code><br>
-- Delete all inactive / dormant containers: <code>docker container prune</code><br>
+- Listing containers (Only running): <code>docker ps</code>
+- Listing all containers (Including dorment): <code>docker ps -a</code> or <code>docker ls -a </code>
+- Delete all inactive / dormant containers: <code>docker container prune</code>
 - Top process running within container: <code>docker top <<-containerID or name->></code><br>
 - Stopping container: <code>docker stop <<-container ID or name->></code>
 - Removing container: <code>docker rm <<-container ID or name->></code>
