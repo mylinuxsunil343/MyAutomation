@@ -51,3 +51,19 @@ Ex: <code>docker run centos</code><br>
 # Docker Architecture vs VM
 
 <image src="docker-arch.jpg">
+
+# Docker container & Shell
+
+- Create container and login to shell <code>docker run -it <<-Image name->> /bin/bash</code>
+- Login to shell, already running container <code>docker exec -it <<-Container name->> /bin/bash</code>
+<hr>
+
+# Docker file
+
+<code>
+FROM ubuntu <br>
+<br>
+RUN apt-get update <br> 
+RUN apt-get install –y nginx<br> 
+CMD [“echo”,”Image created”] <br>
+</code>
