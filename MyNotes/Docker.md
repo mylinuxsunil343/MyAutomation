@@ -50,7 +50,7 @@ Ex: <code>docker run centos</code><br>
 
 <b>Advanced</b><br>
 
-- Publishing Ports:  <code>docker run -it -p 80:80 --detach nginx
+- Publishing Ports:  <code>docker run -it -p 80:80 --detach nginx</code>
 <ul>
 <li>-it : interactive</li>
 <li>-p : publishing ports source:destination</li>
