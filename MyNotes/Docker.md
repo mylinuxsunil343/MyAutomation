@@ -1,5 +1,9 @@
 # Docker Hub
 Store all your images
+- Pull imahe from Docker hub <code>docker pull <<-image>>:<<-tag->> </code><br>
+    ex: docker pull ubuntu:latest
+- Tagging an image <code>docker tag imageID Repositoryname</code>
+- Storing custom image in docker hub <code>docker push Repositoryname</code>
 
 # Docker Images
 Hello world - <code>docker run hello-world</code><br>
@@ -67,3 +71,7 @@ RUN apt-get update <br>
 RUN apt-get install –y nginx<br> 
 CMD [“echo”,”Image created”] <br>
 </code>
+
+# Docker building file
+- Command to build, change directory to docker file and execute <code>docker build . </code>
+- Build own docker image: <code>docker build -t ImageName:TagName <<-Dockerfile->></code>
