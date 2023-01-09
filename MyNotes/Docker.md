@@ -48,6 +48,15 @@ Ex: <code>docker run centos</code><br>
 - unpause the processes in a running container <code>docker unpause <<-container ID or name->></code>
 - kill the processes in a running container <code>docker kill <<-container ID or name->></code>
 
+<b>Advanced</b><br>
+
+- Publishing Ports:  <code>docker run -it -p 80:80 --detach nginx
+<ul>
+<li>-it : interactive</li>
+<li>-p : publishing ports source:destination</li>
+<li>--detach : run in the background</li>
+</ul> 
+
 # Docker Architecture vs VM
 
 <image src="docker-arch.jpg">
