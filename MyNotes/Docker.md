@@ -45,7 +45,7 @@ Ex: <code>docker run centos</code><br>
 ex: <code>docker rm abc</code> will remove the containers starting with abc & if those container stopped<br>
 Note: you can not deleted running containers<br>
 - statistics of a running container: <code>docker stats <<-container ID or name->></code>
-- Attaching container: <code>docker attach <<-container ID or name->></code>, then run top cpmmand to see container stats.
+- Attaching container: <code>docker attach <<-container ID or name->></code>, then run top command to see container stats.
 - pause the processes in a running container <code>docker pause <<-container ID or name->></code>
 - unpause the processes in a running container <code>docker unpause <<-container ID or name->></code>
 - kill the processes in a running container <code>docker kill <<-container ID or name->></code>
@@ -56,7 +56,7 @@ Publishing Ports:  <code>docker run -it -p 80:80 --detach --name mycontainer ngi
 <ul>
 <li>-it : interactive</li>
 <li>-p : publishing ports source:destination</li>
-<li>--detach : run in the background</li>
+<li>--detach or -d : run in the background</li>
 <li>--name : custom name of container</li>
 </ul> 
 
