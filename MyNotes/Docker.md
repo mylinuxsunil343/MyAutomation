@@ -37,11 +37,13 @@ Ex: <code>docker run centos</code><br>
 
 - Docker container shell script: <code>docker run -it centos /bin/bash</code><br>
 - Listing containers (Only running): <code>docker ps</code>
-- Listing all containers (Including dorment): <code>docker ps -a</code> or <code>docker ls -a </code>
+- Listing all containers (Including dorment): <code>docker ps -a</code> or <code>docker container ls -a </code>
 - Delete all inactive / dormant containers: <code>docker container prune</code>
 - Top process running within container: <code>docker top <<-containerID or name->></code><br>
 - Stopping container: <code>docker stop <<-container ID or name->></code>
-- Removing container: <code>docker rm <<-container ID or name->></code>
+- Removing container: <code>docker rm <<-container ID/part of container id or name->></code> <br>
+ex: <code>docker rm abc</code> will remove the containers starting with abc & if those container stopped<br>
+Note: you can not deleted running containers<br>
 - statistics of a running container: <code>docker stats <<-container ID or name->></code>
 - Attaching container: <code>docker attach <<-container ID or name->></code>, then run top cpmmand to see container stats.
 - pause the processes in a running container <code>docker pause <<-container ID or name->></code>
