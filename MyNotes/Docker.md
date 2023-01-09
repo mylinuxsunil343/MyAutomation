@@ -52,7 +52,7 @@ Note: you can not deleted running containers<br>
 
 <b>Advanced</b><br>
 
-- Publishing Ports:  <code>docker run -it -p 80:80 --detach --name mycontainer nginx</code>
+Publishing Ports:  <code>docker run -it -p 80:80 --detach --name mycontainer nginx</code><br>
 <ul>
 <li>-it : interactive</li>
 <li>-p : publishing ports source:destination</li>
