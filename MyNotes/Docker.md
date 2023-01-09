@@ -50,11 +50,12 @@ Ex: <code>docker run centos</code><br>
 
 <b>Advanced</b><br>
 
-- Publishing Ports:  <code>docker run -it -p 80:80 --detach nginx</code>
+- Publishing Ports:  <code>docker run -it -p 80:80 --detach --name mycontainer nginx</code>
 <ul>
 <li>-it : interactive</li>
 <li>-p : publishing ports source:destination</li>
 <li>--detach : run in the background</li>
+<li>--name : custom name of container</li>
 </ul> 
 
 # Docker Architecture vs VM
