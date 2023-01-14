@@ -49,6 +49,8 @@ Note: you can not deleted running containers<br>
 - unpause the processes in a running container <code>docker unpause <<-container ID or name->></code>
 - kill the processes in a running container <code>docker kill <<-container ID or name->></code>
 - starting docker container <code> docker container start <<-container names->> </code>
+- Portdetails : <code>docker container port webserver</code>
+- Use inspect and format to get additional detials <code>docker container inspect --format "{{ .NetworkSettings.IPAddress }}" container-name </code>
 
 <b>Advanced</b><br>
 
@@ -129,6 +131,37 @@ Steps:
 - Create container: <code>docker run -d -it --name myubuntu ubuntu</code>
 - Login to container shell: <code>docker exec -it myubuntu /bin/bash </code>
 - Install necessary packages: <code>apt-get -y update; apt-get install -y curl</code>
+- Create image : <code> docker commit -p -a "Author Sunil" container-name myimage:v1 </code>
 <hr>
 
 # Docker networking
+Each container connected to a provate virtual network "bridge". Each virtual network routes through NAT firewall  on host Ip.<br> 
+
+All containers on a virtual network can talk to each other without -p. Create a new virtual network for wach app (Nginx, httpd & mysql)<br>
+
+<b>Commands</b>
+
+- Show netwroks <code>docker network ls</code>
+- Create network <code>docker network create --driver</code>
+- Attach network to container <code>docker network connect</code>
+- Detach network to container <code>docker network disconnect</code>
+
+Ex: <code>docker network create my_app_network</code><br>
+- Attach while creating container <code>docker container run -d --name mycontainer --network my_app_network nginx</code><br>
+- Check which containers attached to network <code>docker network inspect my_app_network</code><br>
+- Connect exisiting containers <code>docker network connect <<-container/s....>> </code>
+- Disconnect network <code>docker network disconnect <<-container/s....>> </code>
+
+<b>Docker networks - DNS</b>
+
+- Docker daemon has a built-in DNS server that containers use by default
+- Docker defaults the hostname to the containers name. but you can also set aliases
+- Containers attached to the same network can talk to each other irrescptive of their IP Addresses 
+Ex: if container1 & container2 attached to mynetwork, both can talk to each other <code>docker container exec -it container1 ping container2</code> vice versa <br>
+
+You can manually link containers using --link (In case if you do not want to use custome network)<br>
+<br>
+
+# Assignemtn 2 - DNS Round robin test
+
+
