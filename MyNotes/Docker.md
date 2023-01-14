@@ -83,3 +83,12 @@ CMD [“echo”,”Image created”] <br>
 # Docker building file
 - Command to build, change directory to docker file and execute <code>docker build . </code>
 - Build own docker image: <code>docker build -t ImageName:TagName <<-Dockerfile->></code>
+<hr>
+
+# Assignment 1 - Managing multiple containers
+
+MySQL Server: <code>docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD-yes mysql</code><br>
+<ul>
+<li>-e : environment varable</li>
+<li>-p : port</li>
+</ul>
