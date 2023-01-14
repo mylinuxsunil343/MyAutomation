@@ -29,6 +29,6 @@ You can select featureB branch from dropdown and check changes<br>
 <b>Azure devops - Pull Request</b>
 
 - Select : in the line featureB branch in Azure devops
-- Create "New pull request "
-- Click complete to merge featureB branch changes main branch
+- Create "New pull request ", Complete necesary fields & click "create"
+- Click "complete" to merge featureB branch changes main branch
 Process completed. After merged, featureB branch will be deleted<br>
