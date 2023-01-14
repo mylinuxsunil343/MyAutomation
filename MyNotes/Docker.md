@@ -35,7 +35,6 @@ Ex: <code>docker run centos</code><br>
 
 # Docker Containers
 
-- Docker container shell script: <code>docker run -it centos /bin/bash</code><br>
 - Listing containers (Only running): <code>docker ps</code>
 - Listing all containers (Including dorment): <code>docker ps -a</code> or <code>docker container ls -a </code>
 - Delete all inactive / dormant containers: <code>docker container prune</code>
@@ -49,6 +48,7 @@ Note: you can not deleted running containers<br>
 - pause the processes in a running container <code>docker pause <<-container ID or name->></code>
 - unpause the processes in a running container <code>docker unpause <<-container ID or name->></code>
 - kill the processes in a running container <code>docker kill <<-container ID or name->></code>
+- starting docker container <code> docker container start <<-container names->> </code>
 
 <b>Advanced</b><br>
 
@@ -108,3 +108,27 @@ We are binding containers 80 port to host 8081<br>
 - Nginx container: <code>docker container run -d --name proxy -p 80:80 nginx</code>
 - Check http://localhost whether nginx container running or not</br>
 <code>docker container ls -a</code> to check both container running<br>
+
+# Container process monitoring
+
+- List top process <code>docker container top <<-container name->> </code>
+- Details of config <code>docker container inspect <<-container name->> </code>
+- Performance stats <code>docker container stats <<-container name->> </code>
+<hr>
+
+# Getting inside container
+- Docker new container accessing shell : <code>docker run -it container-name /bin/bash</code>
+- Docker exisitng container accessing shell: <code>docker container exec -it container-name /bin/bash</code>
+<hr>
+
+# Create image from Docker container
+
+For ex you created an image using ubuntu and you installed a package. You can create an image using the container, so evrytime you create an instance package automatically installed. <br>
+
+Steps:
+- Create container: <code>docker run -d -it --name myubuntu ubuntu</code>
+- Login to container shell: <code>docker exec -it myubuntu /bin/bash </code>
+- Install necessary packages: <code>apt-get -y update; apt-get install -y curl</code>
+<hr>
+
+# Docker networking
