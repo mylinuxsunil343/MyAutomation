@@ -8,3 +8,10 @@ Choose a process flow or process template to work in Azure Boards<br>
 </ol>
 
 # Azure Repos
+
+Open azure devops board -> Repos -> Select the repo name from dropdown
+1. Open the repo in visual studio code.
+2. Add files /changes to the repo
+3. git add, commit in VS Code
+4. copy paste git push command from azure devops & merge. (It may ask password, you canm generate in azure devops)
+
