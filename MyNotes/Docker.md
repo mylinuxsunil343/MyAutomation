@@ -96,13 +96,15 @@ MySql Container: <code>docker container run -d -p 3306:3306 --name db -e MYSQL_R
 </ul>
 <code>docker container logs db</code> to check mysql password<br>
 
-<b> Web server</b><br>
-HTTPD Server: <code>docker container run -d --name webserver -p 8081:80 httpd</code>
+<b> Web server</b>
+
+- HTTPD Server: <code>docker container run -d --name webserver -p 8081:80 httpd</code>
 We are binding containers 80 port to host 8081<br>
-Check http://localhost:8081/ whether httpd container running or not</br>
+- Check http://localhost:8081/ whether httpd container running or not</br>
 <code>docker container ls -a</code> to check both container running<br>
 
 <b>Proxy NGINX</b><br>
-Nginx container: <code>docker container run -d --name proxy -p 80:80 nginx</code><br>
-Check http://localhost whether nginx container running or not</br>
+
+- Nginx container: <code>docker container run -d --name proxy -p 80:80 nginx</code>
+- Check http://localhost whether nginx container running or not</br>
 <code>docker container ls -a</code> to check both container running<br>
