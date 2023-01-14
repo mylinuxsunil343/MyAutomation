@@ -87,8 +87,22 @@ CMD [“echo”,”Image created”] <br>
 
 # Assignment 1 - Managing multiple containers
 
-MySQL Server: <code>docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD-yes mysql</code><br>
+<b>MySQL Server:</b><br> 
+MySql Container: <code>docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql</code><br>
 <ul>
 <li>-e : environment varable</li>
 <li>-p : port</li>
+<li>-d : detached </li>
 </ul>
+<code>docker container logs db</code> to check mysql password<br>
+
+<b> Web server</b><br>
+HTTPD Server: <code>docker container run -d --name webserver -p 8081:80 httpd</code>
+We are binding containers 80 port to host 8081<br>
+Check http://localhost:8081/ whether httpd container running or not</br>
+<code>docker container ls -a</code> to check both container running<br>
+
+<b>Proxy NGINX</b><br>
+Nginx container: <code>docker container run -d --name proxy -p 80:80 nginx</code><br>
+Check http://localhost whether nginx container running or not</br>
+<code>docker container ls -a</code> to check both container running<br>
