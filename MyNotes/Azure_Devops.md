@@ -31,4 +31,10 @@ You can select featureB branch from dropdown and check changes<br>
 - Select : in the line featureB branch in Azure devops
 - Create "New pull request ", Complete necesary fields & click "create"
 - Click "complete" to merge featureB branch changes main branch
+Note: <br>
 Process completed. After merged, featureB branch will be deleted<br>
+Merge conflicts everything you can see after you create pull request<br>
+
+<b>Import Github repos</b>
+
+- Click on repos name -> Import a Git Repository
