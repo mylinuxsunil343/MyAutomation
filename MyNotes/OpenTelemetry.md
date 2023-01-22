@@ -3,9 +3,9 @@
 <b>Components</b>
 OpenTelemetry can be further divided into other logical components that comprise the typical OTel solution. They are 
 <ol>
-<li>APIs: In charge of gathering the telemetry and all the data that is part of it </li>
-<li>SDKs: get this data out of the current observed process to another entity for analysis</li>
-<li>Collector: Send this data to destination</li>
+<li><b>APIs</b>: In charge of gathering the telemetry and all the data that is part of it </li>
+<li><b>SDKs</b>: get this data out of the current observed process to another entity for analysis</li>
+<li><b>Collector</b>: Send this data to destination</li>
 </ol>
 
 
