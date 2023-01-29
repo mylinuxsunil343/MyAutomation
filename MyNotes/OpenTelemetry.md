@@ -50,8 +50,7 @@ A trace includes one or more spans, which are the instances of a particular oper
 
 <image src="trace.jpg">
 
-The way that we can add spans to an existing trace (or start a new one) is through the API module.
-
+The way that we can add spans to an existing trace (or start a new one) is through the API module.<br>
 Include OTel Module and create a span by making a call to the global tracer provider <br>
 
 Example for Go Application:
