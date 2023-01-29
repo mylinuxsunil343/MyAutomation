@@ -53,6 +53,7 @@ A trace includes one or more spans, which are the instances of a particular oper
 The way that we can add spans to an existing trace (or start a new one) is through the API module.
 
 Include OTel Module and create a span by making a call to the global tracer provider <br>
+
 Ex:
 <code>
 import "go.opentelemetry.io/otel"
