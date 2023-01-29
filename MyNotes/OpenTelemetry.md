@@ -54,7 +54,7 @@ The way that we can add spans to an existing trace (or start a new one) is throu
 
 Include OTel Module and create a span by making a call to the global tracer provider <br>
 
-Ex:
+Example for Go Application:
 <code>
 import "go.opentelemetry.io/otel"
 
