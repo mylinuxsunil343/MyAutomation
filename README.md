@@ -35,10 +35,13 @@
 <li>Github Pipelines</li>
 </ul>
 
-# ther Tutorials
+# Other Tutorials
 <ul>
 <li>Code</li>
 <li>Azure Devops</li>
+<li>Maven</li>
+<li>Gradle</li>
+<li>Jira</li>
 </ul>
 
 # Observability
