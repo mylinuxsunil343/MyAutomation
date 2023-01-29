@@ -34,6 +34,10 @@
 <li>Jenkins</li>
 <li>Github Pipelines</li>
 </ul>
+<b>Credentials Management</b>
+<ul>
+<li>Hashicorp Vault</li>
+</ul>
 
 # Other Tutorials
 <ul>

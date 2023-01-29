@@ -19,3 +19,34 @@ The collector’s entire job can be broken down into three different stages:<br>
 </ol>
 The collector is an ETL pipeline for telemetry data.<br>
 <hr>
+
+<b>Three Pillars of Observability</b><br>
+Types of data</br>
+<ul>
+<li><b>Logs:</b> Immutable, timestamped record of discrete events that happened over time</li>
+<li><b>Metrics:</b> numeric representation of data measured over intervals of time</li>
+<li><b>Traces:</b>representation of a series of causally related distributed events that encode the end-to-end request flow through a distributed system</li>
+</ul>
+
+<b>Instrumentation</b><br>
+ “Instrumentation” referring to the act of collecting trace data. 2 ways to instrument the code
+ <ul>
+ <li>Manual: Explicitly telling our software what data to expose</li>
+ <li>Automation: A way to instrument your application without touching your source code.</li>
+ </ul>
+
+<b>Automatic Instrumentation</b> will give you a similar out of the box experience. If you previously used an APM agent to extract telemetry from your application<br>
+<b>Manually instrument</b> your applications by coding against the OpenTelemetry APIs.<br>
+<b>Steps:</b>
+<ul>
+<li>Import the OpenTelemetry API and SDK </li>
+<li>Configure the OpenTelemetry API</li>
+<li>Configure the OpenTelemetry SDK </li>
+<li>Create Telemetry Data</li>
+<li>Export Data</li>
+</ul>
+
+A trace includes one or more spans, which are the instances of a particular operation. A span has a parent span that it is linked to, unless it is the first span in the trace in which case its span parent ID is all zeros.<br>
+
+The way that we can add spans to an existing trace (or start a new one) is through the API module, which will include all of the packages that we need to start adding manual instrumentation.
+Go API: go.opentelemetry.io/otel
