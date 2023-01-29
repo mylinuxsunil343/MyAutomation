@@ -55,11 +55,11 @@ The way that we can add spans to an existing trace (or start a new one) is throu
 Include OTel Module and create a span by making a call to the global tracer provider <br>
 
 Example for Go Application:
-<code>
+<pre>
 import "go.opentelemetry.io/otel"
 
 // ... other code ...
 
 ctx, span := otel.Tracer("my-telemetry-library").Start(r.Context(), "get_user_cart")
 defer span.End()
-</code>
+</pre>
