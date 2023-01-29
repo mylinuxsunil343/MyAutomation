@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# MyAutomation (In Progress)
-=======
-# MyAutomation
-<b>Programming</b>
->>>>>>> 36d86f7 (Devops)
+# My Automation (In Progress)
 <ul>
 <li>Python</li>
 <li>Go</li>
