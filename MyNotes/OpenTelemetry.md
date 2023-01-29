@@ -49,4 +49,4 @@ Types of data</br>
 A trace includes one or more spans, which are the instances of a particular operation. A span has a parent span that it is linked to, unless it is the first span in the trace in which case its span parent ID is all zeros.<br>
 
 The way that we can add spans to an existing trace (or start a new one) is through the API module, which will include all of the packages that we need to start adding manual instrumentation.<br>
-<b>Go API:</b> go.opentelemetry.io/otel
+<b>Go API:</b> go.opentelemetry.io/otel<br>
