@@ -1,3 +1,10 @@
+"""
+Datatypes:
+    - Number -> Integer, Float, Boolean, Complex
+    - Set
+    - Dictionary
+    - Sequences -> String, List, Tuples
+"""
 import os
 print('Hello '+os.getlogin() + '! Executing python script')
 count = 10
